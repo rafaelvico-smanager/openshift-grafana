@@ -17,7 +17,7 @@ parameters:
 - name: VOLUME_CAPACITY
   displayName: Volume Capacity
   description: Volume space available for data, e.g. 512Mi, 2Gi.
-  value: 4Gi
+  value: 5Gi
   required: true
 objects:
 - apiVersion: v1
@@ -111,7 +111,7 @@ objects:
     name: grafana-lib-pvc
   spec:
     accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
@@ -122,7 +122,7 @@ objects:
     name: grafana-log-pvc
   spec:
     accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
