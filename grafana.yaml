@@ -114,7 +114,7 @@ objects:
     - ReadWriteMany
     resources:
       requests:
-        storage: "${VOLUME_CAPACITY}"
+        storage: ${VOLUME_CAPACITY}
 
 - apiVersion: v1
   kind: PersistentVolumeClaim
@@ -125,7 +125,7 @@ objects:
     - ReadWriteMany
     resources:
       requests:
-        storage: "${VOLUME_CAPACITY}"
+        storage: ${VOLUME_CAPACITY}
 
 - apiVersion: v1
   kind: ConfigMap
@@ -137,7 +137,6 @@ objects:
       #
       # Do not modify this file in grafana installs
       #
-
       # possible values : production, development
       app_mode = production
 
